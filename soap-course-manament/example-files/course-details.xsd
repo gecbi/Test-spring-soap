@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://in28minutes.com/courses" 
+xmlns:tns="http://in28minutes.com/courses" elementFormDefault="qualified">
+	<xs:element name="GetCourseDetailsRequest">
+		
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="integer"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+	
+		<xs:element name="GetCourseDetailsResponse">
+		
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="CoursDetails" type="tns:CoursDetails"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+	<xs:complexType name="CoursDetails">
+		<xs:sequence>
+			<xs:element name="id" type="integer"></xs:element>
+			<xs:element name="name" type="string"></xs:element>
+			<xs:element name="description" type="string"></xs:element>
+			
+		</xs:sequence>
+	</xs:complexType>
+
+<xs:schema></xs:schema>
+
+<!-- <GetCourseDetailsRequest xmlns="http://in28minutes.com/courses">
+<id>123</id>
+</GetCourseDetailsRequest> -->
+
+<!-- <GetCourseDetailsResponse xmlns="http://in28minutes.com/courses"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://in28minutes.com/courses course-details.xsd">
+
+<CoursDetails>
+<id>123</id>
+<name>Spring in28minutes</name>
+<description>You would learn the basics of Spring Framework</description>
+</CoursDetails>
+
+</GetCourseDetailsResponse> -->
